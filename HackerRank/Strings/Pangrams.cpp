@@ -12,7 +12,7 @@ bool isPangram(string &s) {
 
 	for (int i = 0; i < scopy.length(); ++i)
 	{
-		if ( int(scopy[i])-65 >= 0 && int(scopy[i])-65 <= 26 ) 
+		if ( int(scopy[i])-65 >= 0 && int(scopy[i])-65 < 26 ) 
 		{ // its a letter
 			bits[int(scopy[i])-65] = true;
 		}
@@ -28,6 +28,22 @@ bool isPangram(string &s) {
 
 int main(int argc, char const *argv[])
 {   
- 
+ 	
+ 	string s1;
+ 	getline (std::cin,s1);
+
+ 	if (s1.length() < 1 || s1.length() > 1000) {
+ 		return (0);
+ 	}
+
+ 	if (isPangram(s1)) {
+ 		cout << "pangram";
+ 	}
+
+ 	else {
+ 		cout << "not pangram"; 
+ 	}
+
+
     return(0);
 }
