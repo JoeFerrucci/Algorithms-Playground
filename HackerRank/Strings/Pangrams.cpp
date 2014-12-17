@@ -27,19 +27,7 @@ bool isPangram(string &s) {
 }
 
 int main(int argc, char const *argv[])
-{
-    bool bits[26] = {0};
-
-    string s1 = "We promptly judged antique ivory buckles for the next prize";
-    string s2 = "We promptly judged antique ivory buckles for the prize";
-
-    cout << "Is s1 a pangram? " << isPangram(s1);
-
-    cout << endl;
-    
-    cout << "Is s2 a pangram? " << isPangram(s2);
-
-    cout << endl;
+{   
  
     return(0);
 }
